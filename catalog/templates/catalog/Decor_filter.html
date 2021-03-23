@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+
+{% block content %} 
+<div class = "common">
+        <div class = "list">
+            {% for Decor in decor_list %}
+            <ul class = "liststyle">
+                <li>
+                <a href="{{ Decor.get_absolute_url }}">{{ Decor.title }}</a> 
+            </li>
+            </ul>
+            {% endfor %}
+        </div>
+        <div class = "search">
+            <form class = "searchform" action="" method="get">
+                {{ filter.form.as_p }}
+                <input type="submit" value="Искать"/>
+            </form>
+        </div>
+{% endblock %}

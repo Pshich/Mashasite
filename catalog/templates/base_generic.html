@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  {% block title %}<title>АрхШум</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Добавление дополнительного статического CSS файла -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+ </head>
+ 
+<body>
+	<header class = "headerstyle">
+		<p class = "headertextstyle" >АРХШУМ</p>
+	</header>
+
+  <ul class="menu-main">
+    <li><a href="{% url 'index' %}">Главная</a></li>
+    <li><a href="">Статьи</a>
+      <ul class="drop-menu">      
+        <a href="Architecture.html">Архитектура</a></li>
+        <a href="Culture.html">Культура</a></li>
+        <a href="Design.html">Дизайн</a></li>
+      </ul>
+    <li><a href="">Магазин</a>
+      <ul class="drop-menu">
+        <a href="Pots.html">Горшки</a></li>
+        <a href="Dishes.html">Посуда</a></li>
+        <a href="Decor.html">декор</a></li>
+      </ul>
+    <li><a href="url About.html">Обо мне</a></li>
+  </ul>
+	
+ {% block content %}{% endblock %}
+     
+</body>
+</html>

@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+.menu-main 
+	{
+	list-style: none;
+    padding: 25px 0 5px;
+  	text-align: center;
+  	background: white;
+	vertical-align:top;
+	}
+
+.menu-main li 
+	{
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	}
+	
+.menu-main li:after 
+	{
+  	content: "|";
+  	color: #606060;
+  	display: inline-block;
+  	vertical-align:top;
+	}
+
+.menu-main li:last-child:after 
+	{
+	content: none;
+	}
+
+.menu-main a 
+	{
+  	text-decoration: none;
+  	font-family: 'Ubuntu condensed' , sans-serif;
+  	letter-spacing: 2px;
+ 	position: relative;
+  	padding-bottom: 5px;
+  	margin: 0 34px 0 30px;
+  	font-size: 17px;
+  	text-transform: uppercase;
+  	display: inline-block;
+  	transition: color .2s;
+	}
+
+.menu-main a, .menu-main a:visited 
+	{
+	color: #9d999d;
+	}
+
+.menu-main a.current, .menu-main a:hover
+	{
+	color: #000000;
+	}
+
+.menu-main a:before, .menu-main a:after 
+	{
+  	content: "";
+  	position: absolute;
+  	height: 4px;
+  	top: auto;
+  	right: 50%;
+  	bottom: -5px;
+  	left: 50%;
+  	background: #000000;
+  	transition: .8s;
+	}
+
+.drop-menu
+{
+  background-color:none;
+  display: none;
+  position: absolute;
+  padding: 25px 0 25px;
+  text-align: left;
+}
+
+
+.drop-menu a
+{
+  margin-top: 3px;
+}
+
+.menu-main li:hover .drop-menu
+{
+	display:block;
+}
+
+.menu-main li:hover .article p
+{
+	visibility: hidden;
+}
+
+
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}   
+
+@media (max-width: 550px) 
+	{
+	.menu-main {padding-top: 0;}
+	.menu-main li {display: block;}
+	.menu-main li:after {content: none;}
+	.menu-main a {
+	padding: 25px 0 20px; 
+  	margin: 0 30px;
+	}
+	}
+
+.headerstyle 
+	{
+	text-align: center;
+	}
+
+.headertextstyle 
+	{
+  	 font-family: "Trebuchet MS", sans-serif;
+   	font-size: 5em;
+   	letter-spacing: -2px;
+   	border-bottom: 5px solid black;
+   	text-transform: uppercase;
+	}
+
+.liststyle 
+{
+	list-style: none;
+    padding: 25px 0 5px;
+	margin-left: 50px;
+  	text-align: left;
+  	background: white;
+	vertical-align:top;
+}
+
+.liststyle a
+{
+	text-decoration: none;
+	font-family: 'Ubuntu condensed' , sans-serif;
+	letter-spacing: 2px;
+   position: relative;
+	padding-bottom: 5px;
+	margin: 0 34px 0 30px;
+	font-size: 17px;
+	text-transform: uppercase;
+	display: inline-block;
+	transition: color .2s;
+}
+
+.article 
+{
+	margin: 20px 15% 20px;
+	border: 3px solid black;
+	position: relative;
+	display: block;
+}
+
+.article_info
+{
+	list-style: none;
+	color: black;
+	font-family: 'Times New Roman', Times, serif;
+}	
+
+.article_info a
+
+{
+	font-family: inherit;
+	color: inherit;
+}
+
+.title
+{
+	text-align: center;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 35px;
+}
+
+.article_text
+{
+	text-align: left;
+	margin-left: 30%;
+	margin-right: 30%;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 15px;
+}
+
+.common
+{
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.list, .search
+{
+	display: inline-block;
+	vertical-align: top;
+	position:absolute;
+}
+.list
+{
+	margin-right: 20%;
+}
+
+.list a 
+{
+	color: #606060;
+	text-transform: uppercase;
+}
+.liststyle a:hover
+{
+	color: black;
+}
+.search
+{
+	margin-left: 80%;
+}
+
+.searchform ul
+{
+	list-style: none;
+	padding: 0;
+}
+
+.searchform label
+{
+	font-family: 'Ubuntu condensed', sans-serif;
+}

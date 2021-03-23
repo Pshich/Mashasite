@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<div class = "article">
+    <p class = "title">{{article.title}}</p>
+    <li class = "article_info"><i>{{article.pub_date}}</i></li>
+    {% for author in article.author.all %}
+        <li class = "article_info"><i><a href="{{ author.get_absolute_url }}">{{ author.nickname }}</a></i> </li>
+    {% endfor %}
+    </p>
+    <p class = "article_text">{{article.text|safe}}</p>
+
+</div>
+
+{% endblock %}
