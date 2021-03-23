@@ -27,7 +27,7 @@ def about(request):
 class potFilterView(FilterView):
     model = pot
     filterset_class = potFilter # ADD YOUR filterset class
-    template_name = 'catalog/pot_filter.html'
+    template_name = 'catalog/Pot_filter.html'
         
 class decorFilterView(FilterView):
     model = decor
